@@ -1,0 +1,264 @@
+autocmd! bufwritepost .vimrc source %
+
+"set term=xterm-256color
+set hidden
+set t_Co=256
+" set t_Co=16
+" set t_ut=
+let mapleader=","
+"let g:SuperTabDefaultCompletionType = "<c-n>"
+set pastetoggle=<F2>
+set clipboard=unnamed
+set splitbelow
+set splitright
+set autoread
+set foldmethod=marker
+set foldmarker={,}
+set ttimeoutlen=100
+
+set rtp+=~/.fzf
+
+nnoremap <C-w>j <C-w>j
+nnoremap <C-w>k <C-w>k
+nnoremap <C-w>l <C-w>l
+nnoremap <C-w>h <C-w>h
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+"map <Leader>0 <esc>:ls<CR>
+"map <Leader>1 <esc>:b 1<CR>
+"map <Leader>2 <esc>:b 2<CR>
+"map <Leader>3 <esc>:b 3<CR>
+"map <Leader>4 <esc>:b 4<CR>
+"map <Leader>5 <esc>:b 5<CR>
+"map <Leader>6 <esc>:b 6<CR>
+"map <Leader>7 <esc>:b 7<CR>
+"map <Leader>8 <esc>:b 8<CR>
+"map <Leader>9 <esc>:b 9<CR>
+map <Leader>s <esc>:Sscratch<CR>
+map <Leader>q <esc>:q<CR>
+map <Leader>Q <esc>:q!<CR>
+map <Leader>w <esc>:w<CR>
+map <Leader>p <esc>:set paste<CR>
+map <Leader>P <esc>:set nopaste<CR>
+
+" for sorting imports alphabetically
+"vnoremap <Leader>s :sort<CR>
+" allows for indentaion of blocks without losing selection
+" nnoremap ; :
+vnoremap < <gv
+vnoremap > >gv
+"let g:neocomplete#enable_at_startup = 1
+set laststatus=2
+let g:airline_powerline_fonts = 1
+"let base16colorspace=256
+
+set number
+set showmatch
+
+set incsearch
+set ignorecase
+set smartcase
+
+set autoindent
+
+syntax on
+syntax enable
+set background=dark
+"let g:hybrid_use_Xresources = 1
+"let g:solarized_use_Xresources = 1
+"colorscheme hybrid
+"colorscheme PaperColor
+"colorscheme solarized
+"colorscheme gruvbox
+colorscheme base16-default
+"colorscheme onedark
+
+set mouse=a
+
+
+set shiftround
+set expandtab
+" set softtabstop=4
+
+" custom indentation settings per filetype
+autocmd FileType python setl shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType html setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType javascript setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType jade setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType scss setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType css setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType json setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType cpp setl shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType sh setl shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS noci
+
+
+
+"autocmd vimenter * NERDTree
+
+"set completeopt=menu,menuone,longest
+"set pumheight=15
+"let g:SuperTabDefaultCompletionType="context"
+"let g:clang_complete_auto=0
+"let g:clang_complete_copen=1
+"
+"
+"map <silent> <C-m> :NERDTreeFocus<CR>
+map <f7> :NERDTreeToggle<CR>
+map <f8> :TagbarToggle<CR>
+map <f9> :make<CR>
+map <f10> :make clean<CR>
+"map <f11> :!cargo build<CR>
+map <f11> :copen<CR>
+map <f12> :cclose<CR>
+map <f5> :cfirst<CR>
+map <f6> :clast<CR>
+map <f4> :cn<CR>
+map <f3> :cp<CR>
+"nmap ,s :ConqueTermVSplit stackoverflow_cli_search.py<CR>
+"nmap ,p :ConqueTermVSplit python2<CR>
+"nmap ,g :ConqueTermVSplit github_search.py<CR>
+"nmap <leader>t :ConqueTermVSplit bash<CR>
+"nmap <Leader>h :vertical resize -5<CR>
+"nmap <Leader>l :vertical resize +5<CR>
+"nmap <Leader>j :res -5<CR>
+"nmap <Leader>k :res +5<CR>
+" nmap <C-h> :HackerNews<CR>
+
+"autocmd BufWritePost *.py call Flake8()
+"let g:syntastic_python_python_exe = 'python3'
+let g:syntastic_python_checkers=['python3']
+
+" buffer grep
+nmap <Leader>l :LustyBufferGrep<CR>
+
+" tern for vim
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
+let tern_show_signature_in_pum=1
+nmap <Leader>td :TernDoc<CR>
+nmap <Leader>tD :TernDef<CR>
+
+" snipets keys
+let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsExpandTrigger="<c-i>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"pymode settings
+let g:pymode = 1
+let g:pymode_warnings = 1
+"let g:pymode_paths = []
+let g:pymode_trim_whitespaces = 1 
+let g:pymode_options = 1
+let g:pymode_options_max_line_length = 79
+let g:pymode_quickfix_minheight = 3
+let g:pymode_quickfix_maxheight = 6
+"
+let g:pymode_indent = 1
+let g:pymode_folding = 1
+let g:pymode_motion = 1
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_virtual_env = 1
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_breakpoint = 1
+let g:pymode_lint = 1
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_on_fly = 1
+let g:pymode_lint_message = 1
+let g:pymode_lint_ignore = "E501,W"
+let g:pymode_lint_cwindow = 1
+let g:pymode_lint_signs = 1
+let g:pymode_rope = 0
+let g:pymode_rope_show_doc_bind = '<C-c>d'
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 1 
+"let g:pymode_rope_completion_bind = '<C-Space>'
+let g:pymode_rope_goto_definition_bind = '<C-c>g'
+"let g:pymode_rope_goto_definition_cmd = 'vnew'
+let g:pymode_rope_rename_bind = '<C-c>rr'
+let g:pymode_rope_organize_imports_bind = '<C-c>ro'
+let g:pymode_rope_autoimport = 1
+let g:pymode_rope_autoimport_bind = '<C-c>ra'
+let g:pymode_syntax = 1
+let g:pymode_syntax_slow_sync = 1 
+let g:pymode_syntax_all = 1
+
+""vim-slime
+let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
+
+nmap <Leader>f :tabedit %<CR>
+nmap <Leader>F :tabclose<CR>
+
+" google settings
+let g:vim_g_open_command = "vimprobable2"
+let g:vim_g_command = "G"
+
+" go to next visible tag
+nnoremap <leader>% :MtaJumpToOtherTag<cr>
+
+" shortcuts for colorize 
+nmap <Leader>ct :ColorToggle<CR>
+
+
+" jade plugin
+"au FILETYPE jade nnoremap <buffer> <Leader>h :JadeWatch html vert<CR>
+"au FILETYPE jade nnoremap <buffer> <Leader>j :JadeWatch vert<CR>
+
+:let g:JadeCompiler = "jade"
+"nmap <Leader>J :!jade %<CR>
+
+" ctrl-p
+nmap <Leader>j :CtrlPBuffer<CR>
+nmap <Leader>k :CtrlPTag<CR>
+
+nnoremap <Leader>/ :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>? :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+let g:ctrlp_custom_ignore = {'dir': '\v[\/](dist|bower|bower_components|node_modules|coverage)'}
+
+" js libraries
+let g:used_javascript_libs = 'jquery,angularjs,angularui,angularuirouter,requirejs'
+
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
+"au BufRead,BufNewFile *.scss set filetype=scss
+
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
+
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.space = "\ua0"
+
+
+" maps preview to something easier
+nnoremap <leader>} :ptag /<c-r>=expand('<cword>')<cr><cr>
+
+nmap <Leader>t :ptag
+nmap <Leader>T :pclose<CR>
+
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 0
+
+" tmuxline"
+let g:tmuxline_separators = {
+        \ 'left' : '',
+        \ 'left_alt': '',
+        \ 'right' : '',
+        \ 'right_alt' : '',
+        \ 'space' : ' ' }
+
+" zfz keys
+nnoremap <silent> <Space><Space> :Files<CR>
+nnoremap <silent> <Space>j :Buffers<CR>
+nnoremap <silent> <Space>l :Lines<CR>
+nnoremap <silent> <Space>L :BLines<CR>
+nnoremap <silent> <Space>k :Tags<CR>
+nnoremap <silent> <Space>K :BTags<CR>
+nnoremap <silent> <Space>m :Marks<CR>
+nnoremap <silent> <Space>g :GitFiles<CR>

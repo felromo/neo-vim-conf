@@ -1,0 +1,40 @@
+"autocmd Filetype * nested :call tagbar#autoopen(0)
+" Angular html
+let g:tagbar_type_html = {
+	\ 'csagstype' : 'html',
+	\ 'kinds'     : [
+	\ 'd:directive'
+	\ ]
+\ }
+" Angular javascript
+let g:tagbar_type_javascript = {
+	\ 'csagstype' : 'JavaScript',
+	\ 'kinds'     : [
+	\ 'M:module',
+	\ 'C:controller',
+	\ 'D:directive',
+	\ 'E:decorator',
+	\ 'I:filter',
+	\ 'S:service',
+	\ 'r:ngRoute',
+	\ 'F:factory',
+	\ 'd:delegate',
+	\ 'c:class',
+	\ 'm:method',
+	\ 'v:scopeVariables',
+	\ 't:this',
+	\ 'o:model'
+	\ ]
+\ }
+" } Config Plugin End
+
+
+" Adds CSS support (somewhat) to tagbar
+"let g:tagbar_type_css = {
+"\ 'ctagstype' : 'Css',
+"    \ 'kinds'     : [
+"        \ 'c:classes',
+"        \ 's:selectors',
+"        \ 'i:identities'
+"    \ ]
+"\ }

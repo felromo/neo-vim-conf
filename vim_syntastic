@@ -1,0 +1,23 @@
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_auto_loc_list=0
+let g:syntastic_loc_list_height=5
+let g:syntastic_always_populate_loc_list = 1
+
+" TODO sudo npm install -g jscs jshint
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '!'
+" TODO sudo apt-get install tidy
+" html5 support https://github.com/htacg/tidy-html5
+let g:syntastic_html_tidy_exec = 'tidy'
+" Config to make it work better with AngularJS
+let g:syntastic_html_tidy_ignore_errors=["proprietary attribute " ,"trimming empty <", "unescaped &" , "lacks \"action", "is not recognized!", "discarding unexpected"]
+" } Config Plugin End
+
+" SASS lint checker"
+let g:syntastic_scss_checkers = ['scss_lint']
+
+" status line for Syntastic
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
