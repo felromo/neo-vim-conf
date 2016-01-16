@@ -51,7 +51,7 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'w0ng/vim-hybrid'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'lyxell/pride.vim'
-Plug 'jaxbot/browserlink.vim'
+"Plug 'jaxbot/browserlink.vim'
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'xolox/vim-misc'
@@ -88,6 +88,8 @@ Plug 'junegunn/fzf.vim'
 Plug '1995eaton/vim-better-javascript-completion'
 Plug 'othree/jspc.vim'
 Plug 'ludovicchabant/vim-gutentags'
+" makes nvim very very slow 
+"Plug 'severin-lemaignan/vim-minimap'
 
 "extra installation step for tern
 function! BuildTern(info)
