@@ -18,6 +18,9 @@ set ttimeoutlen=100
 
 set rtp+=~/.fzf
 
+" load before vim-surround to prevent key collisions
+call yankstack#setup()
+
 nnoremap <C-w>j <C-w>j
 nnoremap <C-w>k <C-w>k
 nnoremap <C-w>l <C-w>l
@@ -50,7 +53,7 @@ vnoremap > >gv
 "let g:neocomplete#enable_at_startup = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
-"let base16colorspace=256
+let base16colorspace=256
 
 set number
 set showmatch
@@ -63,14 +66,14 @@ set autoindent
 
 syntax on
 syntax enable
-set background=dark
 "let g:hybrid_use_Xresources = 1
 "let g:solarized_use_Xresources = 1
 "colorscheme hybrid
 "colorscheme PaperColor
 "colorscheme solarized
 "colorscheme gruvbox
-colorscheme base16-default
+colorscheme base16-tomorrow
+set background=dark
 "colorscheme onedark
 
 set mouse=a
@@ -149,7 +152,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:pymode = 1
 let g:pymode_warnings = 1
 "let g:pymode_paths = []
-let g:pymode_trim_whitespaces = 1 
+let g:pymode_trim_whitespaces = 1
 let g:pymode_options = 1
 let g:pymode_options_max_line_length = 79
 let g:pymode_quickfix_minheight = 3
@@ -174,7 +177,7 @@ let g:pymode_lint_signs = 1
 let g:pymode_rope = 0
 let g:pymode_rope_show_doc_bind = '<C-c>d'
 let g:pymode_rope_completion = 0
-let g:pymode_rope_complete_on_dot = 1 
+let g:pymode_rope_complete_on_dot = 1
 "let g:pymode_rope_completion_bind = '<C-Space>'
 let g:pymode_rope_goto_definition_bind = '<C-c>g'
 "let g:pymode_rope_goto_definition_cmd = 'vnew'
@@ -183,7 +186,7 @@ let g:pymode_rope_organize_imports_bind = '<C-c>ro'
 let g:pymode_rope_autoimport = 1
 let g:pymode_rope_autoimport_bind = '<C-c>ra'
 let g:pymode_syntax = 1
-let g:pymode_syntax_slow_sync = 1 
+let g:pymode_syntax_slow_sync = 1
 let g:pymode_syntax_all = 1
 
 ""vim-slime
@@ -200,7 +203,7 @@ let g:vim_g_command = "G"
 " go to next visible tag
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
 
-" shortcuts for colorize 
+" shortcuts for colorize
 nmap <Leader>ct :ColorToggle<CR>
 
 
@@ -256,8 +259,8 @@ let g:tmuxline_separators = {
 " zfz keys
 nnoremap <silent> <Space><Space> :Files<CR>
 nnoremap <silent> <Space>j :Buffers<CR>
-nnoremap <silent> <Space>l :Lines<CR>
-nnoremap <silent> <Space>L :BLines<CR>
+nnoremap <silent> <Space>L :Lines<CR>
+nnoremap <silent> <Space>l :BLines<CR>
 nnoremap <silent> <Space>k :Tags<CR>
 nnoremap <silent> <Space>K :BTags<CR>
 nnoremap <silent> <Space>m :Marks<CR>
