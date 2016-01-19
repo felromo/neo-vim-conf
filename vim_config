@@ -265,3 +265,6 @@ nnoremap <silent> <Space>k :Tags<CR>
 nnoremap <silent> <Space>K :BTags<CR>
 nnoremap <silent> <Space>m :Marks<CR>
 nnoremap <silent> <Space>g :GitFiles<CR>
+
+" remove auto-pairs shortcut
+let g:AutoPairsShortcutToggle = ''
