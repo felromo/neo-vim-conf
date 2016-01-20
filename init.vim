@@ -90,6 +90,7 @@ Plug 'othree/jspc.vim'
 "Plug 'ludovicchabant/vim-gutentags'
 " makes nvim very very slow 
 "Plug 'severin-lemaignan/vim-minimap'
+Plug 'matze/vim-move'
 
 "extra installation step for tern
 function! BuildTern(info)
@@ -114,7 +115,6 @@ Plug 'Valloric/YouCompleteMe', {'do': function('BuildYCM')}
 
 call plug#end()
 
-set nocompatible
 filetype plugin indent on
 
 "" Regular vimrc stuff goes here
