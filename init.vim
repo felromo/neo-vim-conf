@@ -30,7 +30,8 @@ Plug 'SirVer/ultisnips'
 "Plug 'csexton/snipmate.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'bling/vim-airline'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'szw/vim-g'
 "Plug 'fatih/vim-go'
@@ -91,6 +92,7 @@ Plug 'othree/jspc.vim'
 " makes nvim very very slow 
 "Plug 'severin-lemaignan/vim-minimap'
 Plug 'matze/vim-move'
+"Plug 'Ioannis-Kapoulas/vim-autoprefixer'
 
 "extra installation step for tern
 function! BuildTern(info)
