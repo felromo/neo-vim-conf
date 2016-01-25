@@ -93,6 +93,7 @@ Plug 'othree/jspc.vim'
 "Plug 'severin-lemaignan/vim-minimap'
 Plug 'matze/vim-move'
 "Plug 'Ioannis-Kapoulas/vim-autoprefixer'
+Plug 'mxw/vim-jsx'
 
 "extra installation step for tern
 function! BuildTern(info)
