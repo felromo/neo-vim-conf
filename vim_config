@@ -66,13 +66,13 @@ set autoindent
 
 syntax on
 syntax enable
-"let g:hybrid_use_Xresources = 1
-"let g:solarized_use_Xresources = 1
+"let g:hybrid_custom_term_colors = 1
+"let g:solarized_termcolors=256
 "colorscheme hybrid
 "colorscheme PaperColor
 "colorscheme solarized
 "colorscheme gruvbox
-colorscheme base16-tomorrow
+colorscheme base16-default
 set background=dark
 "colorscheme onedark
 
@@ -268,3 +268,15 @@ nnoremap <silent> <Space>g :GitFiles<CR>
 
 " remove auto-pairs shortcut
 let g:AutoPairsShortcutToggle = ''
+
+" fugitive shortcuts
+nnoremap <Leader><Leader>gs :Gstatus<CR>
+nnoremap <Leader><Leader>gw :Gwrite<CR>
+nnoremap <Leader><Leader>gc :Gcommit<CR>
+
+" instant markdown
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+
+" enable jsx syntax on js files"
+let g:jsx_ext_required = 0
